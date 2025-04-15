@@ -1,0 +1,242 @@
+/* General Reset */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+strong {
+    color: #38bdf8;
+    font-weight: bolder;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #000000, #1c2b4e, #5e03a8, #9b03c9);
+    /* Blue to Purple to Black gradient */
+    color: #f8fafc;
+    cursor: default;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #101a30;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 1000;
+    padding-left: 80px;
+    padding-right: 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #38bdf8;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.nav-links a {
+    color: #f8fafc;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* Page Container */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 140px 20px 60px;
+    /* top padding for navbar */
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    color: #38bdf8;
+}
+
+.tagline {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    color: #94a3b8;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 60px;
+    margin-top: 10px;
+    scroll-margin-top: 140px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    /* Set normal weight for body text */
+    /* 👈 This makes space for fixed navbar */
+
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-left: 5px solid #38bdf8;
+    padding-bottom: 6px;
+    padding-left: 20px;
+    display: inline-block;
+}
+
+section p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    line-height: 1.7;
+}
+
+ul,
+ol {
+    margin-left: 20px;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+code,
+pre {
+    background-color: #4a3061;
+    padding: 4px 8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+    color: #facc15;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 110px;
+    margin-bottom: 50px;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+footer a:hover {
+    color: #eed5ff;
+}
+/* Tech & How It Works side-by-side */
+.tech-how-wrapper {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.tech-how-wrapper section {
+    flex: 1 1 45%;
+    min-width: 300px;
+}
+
+#try {
+    margin-top: -4rem;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: #f8fafc;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 1400px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+        display: none;
+        margin-top: 20px;
+    }
+    .nav-links a {
+        font-size: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+}
+
+/* Code Styling */
+pre {
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+code {
+    color: #facc15;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    white-space: pre-wrap;
+    /* Ensures the text wraps on smaller screens */
+    word-wrap: break-word;
+    /* Prevents text from overflowing */
+}
+
+@media (max-width: 768px) {
+    pre {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    code {
+        font-size: 0.9rem;
+    }
+}

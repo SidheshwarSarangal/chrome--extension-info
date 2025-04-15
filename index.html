@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AI-Based Chrome Extension</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo nav-links">
+                <a href="#">🚀 AI Extension</a>
+            </div>
+            <div class="hamburger" id="hamburger">&#9776;</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#tech">Tech Stack</a></li>
+                <li><a href="#how">How It Works</a></li>
+                <li><a href="#try">Try It Now</a></li>
+                <li><a href="#troubleshoot">Troubleshoot</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <header>
+                <h1>AI-Powered Chrome Extension</h1>
+                <p class="tagline">Extract and analyze web page data with the
+                    power of Groq AI</p>
+            </header>
+
+            <section id="overview">
+                <h2>Overview</h2>
+                <p>
+                    This Chrome Extension captures content from any webpage,
+                    leverages Groq AI for processing,
+                    and generates a downloadable .txt file. This is especially
+                    useful for product managers,
+                    consultants, or researchers who want to quickly extract and
+                    digest webpage content.
+                </p>
+                <p>
+                    Say goodbye to manually going through long articles. Get
+                    intelligent summaries delivered instantly!
+                </p>
+            </section>
+
+            <section id="features">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>📝 Extracts all visible text from the web page</li>
+                    <li>🧠 Sends the text to <strong>Groq AI API</strong> for
+                        smart insights</li>
+                    <li>🖼️ Captures all images on the page</li>
+                    <li>📤 Sends each image to <strong>Groq AI API</strong> for
+                        visual understanding</li>
+                    <li>📄 Generates a neatly formatted <code>.txt</code> file
+                        with AI insights</li>
+                    <li>🧾 Includes image links with associated AI
+                        summaries</li>
+                    <li>⚙️ Built and bundled with <strong>Webpack</strong> for
+                        efficiency</li>
+                    <li>🔧 Easy install with <strong>Chrome Manifest
+                            V3</strong></li>
+                </ul>
+            </section>
+
+            <div class="tech-how-wrapper">
+                <section id="tech">
+                    <h2>Technical Stack</h2>
+                    <p><strong>Frontend:</strong> JavaScript, HTML, CSS</p>
+                    <p><strong>APIs:</strong> Groq AI API</p>
+                    <p><strong>Bundler:</strong> Webpack</p>
+                </section>
+
+                <section id="how">
+                    <h2>How Components Work</h2>
+                    <ol>
+                        <ul>
+                            <li>
+                                <strong>🔧 Background Script:</strong>
+                                Coordinates between popup, content script, and
+                                external APIs.
+                            </li>
+                            <li>
+                                <strong>🌐 Content Script:</strong>
+                                Injected into web pages to extract text and
+                                images. Sends captured data to background or
+                                popup for processing.
+                            </li>
+                            <li>
+                                <strong>🧠 Groq API:</strong>
+                                Returns smart summaries or insights from webpage
+                                content.
+                            </li>
+                            <li>
+                                <strong>💬 Popup:</strong>
+                                Allows user to trigger actions like
+                                capture and process.
+                            </li>
+                        </ul>
+
+                    </ol>
+                </section>
+            </div>
+
+            <section id="try">
+                <h2>Try It Now!</h2>
+                <ol>
+                    <li>Clone this repository:
+                        <pre><code>git clone https://github.com/your-username/chrome-ext-webpage-data.git</code></pre>
+                    </li>
+                    <li>Open Google Chrome and go to
+                        <code>chrome://extensions/</code></li>
+                    <li>Enable <strong>Developer mode</strong></li>
+                    <li>Click <strong>"Load unpacked"</strong> and select the
+                        cloned project folder</li>
+                    <li>Open any webpage</li>
+                    <li>Click the <strong>Extensions</strong> icon and choose
+                        <strong>"My Chrome Extension"</strong></li>
+                    <li>Click the <strong>"Get Info!!!!"</strong> button</li>
+                </ol>
+                <p>✨ The AI-processed <code>.txt</code> file will automatically
+                    download!</p>
+            </section>
+
+            <section id="troubleshoot">
+                <h2>Troubleshoot</h2>
+                <p>If you're facing issues with the extension not working or the
+                    dist folder missing, try the following:</p>
+                <ol>
+                    <li>Remove the old dist folder:
+                        <pre><code>rm -rf dist/</code></pre>
+                    </li>
+                    <li>Rebuild the extension bundle using Webpack:
+                        <pre><code>npx webpack --config webpack.config.js</code></pre>
+                    </li>
+                    <li>Ensure you are loading the freshly built
+                        dist folder in
+                        <code>chrome://extensions/</code>.</li>
+                    <li>If problems persist, check the browser console and
+                        terminal for errors.</li>
+                </ol>
+                <p>🛠️ These steps usually fix missing scripts or loading
+                    problems!</p>
+            </section>
+
+            <footer>
+                <p>
+                    &copy; 2025 AI Chrome Extension | Built with ❤️ and Groq AI
+                    | Sidheshwar Sarangal |
+                    <a href="https://www.linkedin.com/in/sidheshwar-sarangal-0b31482b8"
+                        target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+                    <a href="https://github.com/SidheshwarSarangal"
+                        target="_blank" rel="noopener noreferrer">GitHub</a>
+                </p>
+            </footer>
+        </div>
+        <script>
+            // Toggle nav menu on small screens
+            document.getElementById('hamburger').addEventListener('click', () => {
+              document.getElementById('nav-links').classList.toggle('active');
+            });
+          </script>
+    </body>
+</html>
